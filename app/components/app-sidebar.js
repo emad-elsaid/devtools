@@ -6,7 +6,7 @@ export default Ember.Component.extend({
 
   didInsertElement(){
     var ul = this.$('.side-nav');
-    var top = ul.offset().top - $(document).scrollTop();
+    var top = ul.offset().top - Ember.$(document).scrollTop();
     ul.outerHeight(this.$().parent().height() - top);
     Ember.run.later(this, this.didInsertElement, 500);
   },
