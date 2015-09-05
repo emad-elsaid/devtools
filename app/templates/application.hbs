@@ -1,3 +1,11 @@
-<h2 id="title">Welcome to Ember</h2>
-
-{{outlet}}
+{{app-navbar}}
+<div class="container">
+  <aside>
+    {{app-sidebar}}
+  </aside>
+  <section class="body">
+    <div class="container">
+      {{outlet}}
+    </div>
+  </section>
+</div>

@@ -1,0 +1,17 @@
+{{input placeholder="Search..." value=search autofocus="true"}}
+<ul class="side-nav">
+  {{#each routes as |route|}}
+  {{#link-to route.route tagName='li' href='#'}}
+    {{#link-to route.route }}{{route.label}}{{/link-to}}
+  {{/link-to}}
+  {{else}}
+    <div class="empty">
+      <i class="mdi">info</i><br/>
+      {{#if search}}
+        There is no scripts matches "{{search}}".
+      {{else}}
+        Opps, looks like we still don't have any scripts yet.
+      {{/if}}
+    </div>
+  {{/each}}
+</ul>
