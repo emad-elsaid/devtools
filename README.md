@@ -1,7 +1,7 @@
 # Devtools
 
-This README outlines the details of collaborating on this Ember application.
-A short introduction of this app could easily go here.
+A web application built with Emberjs aims to collect all handy scripts developers
+need everyday in one place such as (json encoder/decoder, json prettify, Markdown preview, uuid generator, md5 encryptor, image crop tool..etc).
 
 ## Prerequisites
 
@@ -23,25 +23,23 @@ You will need the following things properly installed on your computer.
 ## Running / Development
 
 * `ember server`
-* Visit your app at [http://localhost:4200](http://localhost:4200).
-
-### Code Generators
-
-Make use of the many generators for code, try `ember help generate` for more details
-
-### Running Tests
-
-* `ember test`
-* `ember test --server`
+* Visit your app at [http://localhost:3000](http://localhost:3000).
 
 ### Building
 
 * `ember build` (development)
 * `ember build --environment production` (production)
 
-### Deploying
+### Contribution
 
-Specify what it takes to deploy your app.
+* Fork Devtools
+* Create a new branch with the tool name.
+* add single route to your script and code it in one route/template.
+* commit and push it then send me a pull request.
+
+### Tools Requests
+
+* suggestions to enhance and add more tools to this repository is most welcome, please open an issue with the tool proposal to this repository.
 
 ## Further Reading / Useful Links
 
@@ -50,4 +48,3 @@ Specify what it takes to deploy your app.
 * Development Browser Extensions
   * [ember inspector for chrome](https://chrome.google.com/webstore/detail/ember-inspector/bmdblncegkenkacieihfhpjfppoconhi)
   * [ember inspector for firefox](https://addons.mozilla.org/en-US/firefox/addon/ember-inspector/)
-
