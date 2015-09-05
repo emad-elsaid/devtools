@@ -2,7 +2,7 @@
 <ul class="side-nav">
   {{#each routes as |route|}}
   {{#link-to route.route tagName='li' href='#'}}
-    {{#link-to route.route }}{{route.label}}{{/link-to}}
+    {{#link-to route.route }}<i class="mdi">code</i> {{titlize route.label}}{{/link-to}}
   {{/link-to}}
   {{else}}
     <div class="empty">
