@@ -14,7 +14,7 @@ export default Ember.Component.extend({
   isValid(route){
     var isExceptionalRoute = ['error', 'index', 'loading', 'application'].contains(route);
     var isSubstate = route.endsWith('_error') || route.endsWith('_loading');
-    var includeSearch = route.includes(this.get('search'));
+    var includeSearch = route.toLowerCase().includes(this.get('search').toLowerCase());
     return !(isExceptionalRoute || isSubstate) && includeSearch;
   },
 
@@ -30,7 +30,7 @@ export default Ember.Component.extend({
         });
       }
     }
-    return objects;
+    return objects.sortBy('label');
   }.property('search'),
 
 });
