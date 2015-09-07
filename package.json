@@ -41,6 +41,8 @@
     "ember-data": "1.13.7",
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.3",
+    "gulp": "^3.9.0",
+    "gulp-run": "^1.6.10",
     "markdown": "^0.5.0",
     "pretty-data": "^0.40.0"
   }
