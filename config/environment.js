@@ -52,5 +52,9 @@ module.exports = function(environment) {
     ENV.baseURL = '/devtools'
   }
 
+  if (environment === 'chrome') {
+    ENV.baseURL = '/app'
+  }
+
   return ENV;
 };
