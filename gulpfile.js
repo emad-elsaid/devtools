@@ -27,7 +27,7 @@ gulp.task('git-commit', ['git-add'], function(){
 });
 
 gulp.task('git-push', ['git-commit'], function(){
-  return run('git push', git_opts).exec();
+  return run('git push origin gh-pages', git_opts).exec();
 });
 
 gulp.task('default', ['build', 'clean', 'copy', 'git-push'], function(){});
