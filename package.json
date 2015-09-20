@@ -19,6 +19,7 @@
   "author": "",
   "license": "MIT",
   "devDependencies": {
+    "autoprefixer": "^6.0.2",
     "blueimp-md5": "^1.1.1",
     "broccoli-asset-rev": "^2.0.2",
     "broccoli-clean-css": "1.0.0",
@@ -44,6 +45,7 @@
     "gulp": "^3.9.0",
     "gulp-run": "^1.6.10",
     "markdown": "^0.5.0",
+    "postcss": "^5.0.5",
     "pretty-data": "^0.40.0"
   }
 }

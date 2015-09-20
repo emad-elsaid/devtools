@@ -22,6 +22,7 @@ Router.map(function() {
   this.route('minifyJson');
   this.route('prettyPrintSql');
   this.route('minifySql');
+  this.route('autoprefixer');
 });
 
 export default Router;
