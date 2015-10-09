@@ -13,7 +13,7 @@ module.exports = function(environment) {
       'connect-src': "'self'",
       'img-src': "'self' www.facebook.com p.typekit.net www.google-analytics.com",
       'style-src': "'self' 'unsafe-inline' use.typekit.net",
-      'frame-src': "s-static.ak.facebook.com static.ak.facebook.com www.facebook.com"
+      'frame-src': "'self' s-static.ak.facebook.com static.ak.facebook.com www.facebook.com"
     },
     EmberENV: {
       FEATURES: {

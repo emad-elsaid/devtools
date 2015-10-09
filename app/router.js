@@ -23,6 +23,7 @@ Router.map(function() {
   this.route('prettyPrintSql');
   this.route('minifySql');
   this.route('autoprefixer');
+  this.route('HtmlJsCssSandbox');
 });
 
 export default Router;
