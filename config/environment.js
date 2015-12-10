@@ -5,7 +5,7 @@ module.exports = function(environment) {
     modulePrefix: 'devtools',
     environment: environment,
     baseURL: '/',
-    locationType: 'auto',
+    locationType: 'hash',
     contentSecurityPolicy: {
       'default-src': "'none'",
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com use.typekit.net connect.facebook.net maps.googleapis.com maps.gstatic.com",
@@ -49,11 +49,11 @@ module.exports = function(environment) {
   }
 
   if (environment === 'production') {
-    ENV.baseURL = '/devtools'
+    ENV.baseURL = '/devtools';
   }
 
   if (environment === 'chrome') {
-    ENV.baseURL = '/app'
+    ENV.baseURL = '/app';
   }
 
   return ENV;
