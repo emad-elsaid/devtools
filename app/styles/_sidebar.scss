@@ -11,5 +11,13 @@
         border-top: 0px none;
       }
     }
+    .selected{
+      li{
+        background-color: $primary-color;
+        a{
+          color: #fff !important;
+        }
+      }
+    }
   }
 }

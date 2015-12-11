@@ -1,6 +1,8 @@
 import Ember from 'ember';
+import KeyboardShortcuts from 'ember-keyboard-shortcuts/mixins/component';
 
-export default Ember.Component.extend({
+
+export default Ember.Component.extend( KeyboardShortcuts,{
   classNames: ['sidebar'],
   search: '',
 
@@ -32,5 +34,48 @@ export default Ember.Component.extend({
     }
     return objects.sortBy('label');
   }.property('search'),
+
+
+  // keyboard accessibility
+  selectedIndex: 0,
+  selectedRoute: function(){
+    return this.get('routes')[this.get('selectedIndex')];
+  }.property('selectedIndex', 'routes'),
+
+  // rest selected index if the search query changed
+  selectedRouteReseter: function(){
+    this.set('selectedIndex', 0);
+  }.observes('routes'),
+
+  actions: {
+    keyboardUp: function(){
+      if(this.get('selectedIndex')===0){return;}
+      this.decrementProperty('selectedIndex');
+    },
+
+    keyboardDown: function(){
+      if(this.get('selectedIndex')>=this.get('routes').length-1){return;}
+      this.incrementProperty('selectedIndex');
+    },
+
+    keyboardEnter: function(){
+      this.container.lookup('router:main').router.transitionTo(this.get('selectedRoute').route);
+    }
+  },
+
+  keyboardShortcuts: {
+    'up': {
+      action: 'keyboardUp',
+      scoped: true
+    },
+    'down': {
+      action: 'keyboardDown',
+      scoped: true
+    },
+    'enter': {
+      action: 'keyboardEnter',
+      scoped: true
+    }
+  }
 
 });

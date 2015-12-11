@@ -12,6 +12,7 @@
     "jquery": "2.1.4",
     "loader.js": "ember-cli/loader.js#3.2.0",
     "qunit": "~1.17.1",
-    "foundation": "~5.5.0"
+    "foundation": "~5.5.0",
+    "mousetrap": "~1.5.2"
   }
 }

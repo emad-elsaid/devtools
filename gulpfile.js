@@ -1,8 +1,8 @@
 var gulp = require('gulp'),
-    run = require('gulp-run');
+    run  = require('gulp-run');
 
-var cmd_opts = {verbosity: 1};
-var git_opts = {cwd: 'gh-pages'}
+var cmd_opts = {verbosity: 1},
+    git_opts = {cwd: 'gh-pages'};
 
 gulp.task('build', function(){
   return run('ember build -prod', cmd_opts).exec();

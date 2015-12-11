@@ -1,9 +1,7 @@
 {{input placeholder="Search..." value=search autofocus="true"}}
 <ul class="side-nav">
   {{#each routes as |route|}}
-  {{#link-to route.route tagName='li' href='#'}}
-    {{#link-to route.route }}<i class="mdi">code</i> {{titlize route.label}}{{/link-to}}
-  {{/link-to}}
+    {{app-sidebar-item route=route selectedRoute=selectedRoute}}
   {{else}}
     <div class="empty">
       <i class="mdi">info</i><br/>
