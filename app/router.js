@@ -24,6 +24,7 @@ Router.map(function() {
   this.route('minifySql');
   this.route('autoprefixer');
   this.route('HtmlJsCssSandbox');
+  this.route('numberSystemsCalculator');
 });
 
 export default Router;
