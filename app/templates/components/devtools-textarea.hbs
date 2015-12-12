@@ -1,0 +1,11 @@
+{{textarea rows=rows cols=cols placeholder=placeholder name=name selectionEnd=selectionEnd selectionStart=selectionStart wrap=wrap lang=lang dir=dir value=value}}
+{{#if showNotifier}}
+  <div class="notifier">
+    <form>
+      {{devtools-file value=value name="uploader" id=fileID}}
+      <label {{bind-attr for=fileID }}>
+        <i class="mdi">insert_drive_file</i> Open a file
+      </label>
+    </form>
+  </div>
+{{/if}}

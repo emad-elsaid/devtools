@@ -1,0 +1,17 @@
+.devtools-textarea{
+  .notifier{
+    color: #ccc;
+    margin-top: -50px;
+    margin-bottom: 50px;
+    margin-left: 10px;
+  }
+
+  input[type=file]{
+    width: 0.1px;
+  	height: 0.1px;
+  	opacity: 0;
+  	overflow: hidden;
+  	position: absolute;
+  	z-index: -1;
+  }
+}
