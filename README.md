@@ -37,6 +37,10 @@ You will need the following things properly installed on your computer.
 * add single route to your script and code it in one route/template.
 * commit and push it then send me a pull request.
 
+### Tools Development tutorial
+
+You can find a step by step tutorial in [repository Wiki](https://github.com/blazeeboy/devtools/wiki)
+
 ### Tools Requests
 
 * suggestions to enhance and add more tools to this repository is most welcome, please open an issue with the tool proposal to this repository.
