@@ -8,6 +8,11 @@ export default Ember.Component.extend({
     return this.get('value').toString().length < 100;
   }.property('value'),
 
+  textLength: function(){
+    if(! this.get('value') ){ return 0; }
+    return this.get('value').toString().length;
+  }.property('value'),
+
   fileID: function(){
     return "uploader-" + Math.random().toString(32).slice(2);
   }.property()
