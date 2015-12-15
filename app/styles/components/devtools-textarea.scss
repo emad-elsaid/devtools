@@ -1,26 +1,33 @@
 .devtools-textarea{
-  .notifier{
-    color: #ccc;
-    margin-top: -35px;
-    margin-bottom: 35px;
-    margin-left: 10px;
-  }
 
   textarea{
     margin-bottom: 0px;
   }
 
-  input[type=file]{
-    width: 0.1px;
-  	height: 0.1px;
-  	opacity: 0;
-  	overflow: hidden;
-  	position: absolute;
-  	z-index: -1;
-  }
 
-  .textarea-length{
-    color: #999999;
+  .tools{
     margin-bottom: $form-spacing;
+
+    form{
+      display: inline-block;
+    }
+
+    input[type=file]{
+      width: 0.1px;
+    	height: 0.1px;
+    	opacity: 0;
+    	overflow: hidden;
+    	position: absolute;
+    	z-index: -1;
+    }
+
+    .textarea-length{
+      color: #999999;
+    }
+
+    label{
+      display: inline-block;
+    }
+
   }
 }
