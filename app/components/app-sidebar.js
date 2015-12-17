@@ -8,6 +8,7 @@ export default Ember.Component.extend( KeyboardShortcuts,{
 
   didInsertElement(){
     var ul = this.$('.side-nav');
+    if( !ul ){ return false; }
     var top = ul.offset().top - Ember.$(document).scrollTop();
     ul.outerHeight(this.$().parent().height() - top);
     Ember.run.later(this, this.didInsertElement, 500);
@@ -21,7 +22,10 @@ export default Ember.Component.extend( KeyboardShortcuts,{
   },
 
   routes: function(){
-    var routes = this.container.lookup('router:main').router.recognizer.names;
+    var container = this.container.lookup('router:main');
+    var router = container.router;
+    if( !router ){ return []; }
+    var routes = router.recognizer.names;
     var keys = Object.keys(routes);
     var objects = [];
     for(var i=0; i<keys.length; i++){

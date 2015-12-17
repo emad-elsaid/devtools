@@ -6,21 +6,6 @@ moduleForComponent('devtools-file', 'Integration | Component | devtools file', {
 });
 
 test('it renders', function(assert) {
-  assert.expect(2);
-
-  // Set any properties with this.set('myProperty', 'value');
-  // Handle any actions with this.on('myAction', function(val) { ... });
-
   this.render(hbs`{{devtools-file}}`);
-
-  assert.equal(this.$().text().trim(), '');
-
-  // Template block usage:
-  this.render(hbs`
-    {{#devtools-file}}
-      template block text
-    {{/devtools-file}}
-  `);
-
-  assert.equal(this.$().text().trim(), 'template block text');
+  assert.notEqual(this.$().html().trim(), '');
 });

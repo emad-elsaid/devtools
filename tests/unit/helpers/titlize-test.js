@@ -5,6 +5,6 @@ module('Unit | Helper | titlize');
 
 // Replace this with your real tests.
 test('it works', function(assert) {
-  var result = titlize(42);
-  assert.ok(result);
+  var result = titlize(['TestRoute']);
+  assert.equal(result, 'Test Route');
 });
