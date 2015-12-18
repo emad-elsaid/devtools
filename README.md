@@ -1,4 +1,4 @@
-# Devtools
+# DevTools [![Build Status](https://travis-ci.org/blazeeboy/devtools.svg?branch=master)](https://travis-ci.org/blazeeboy/devtools.svg)
 
 A web application built with Emberjs aims to collect all handy scripts developers
 need everyday in one place such as (json encoder/decoder, json prettify, Markdown preview, uuid generator, md5 encryptor, image crop tool..etc).
