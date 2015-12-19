@@ -47,6 +47,7 @@
     "gulp-run": "^1.6.10",
     "markdown": "^0.5.0",
     "postcss": "^5.0.5",
-    "pretty-data": "^0.40.0"
+    "pretty-data": "^0.40.0",
+    "clipboard": "~1.5.5"
   }
 }
