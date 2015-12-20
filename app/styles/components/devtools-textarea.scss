@@ -8,6 +8,10 @@
   .tools{
     margin-bottom: $form-spacing;
 
+    label i{
+      font-size: rem-calc(18);
+    }
+
     form{
       display: inline-block;
     }
@@ -22,6 +26,7 @@
     }
 
     .textarea-length{
+      font-size: rem-calc(15);
       color: #999999;
     }
 

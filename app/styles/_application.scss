@@ -12,7 +12,7 @@ $aside-width: 300px;
   section.body{
     padding-left: $aside-width;
     .container{
-      padding: 20px;
+      padding: rem-calc(10);
     }
   }
 }
