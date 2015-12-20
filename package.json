@@ -23,6 +23,7 @@
     "blueimp-md5": "^1.1.1",
     "broccoli-asset-rev": "^2.0.2",
     "broccoli-clean-css": "1.0.0",
+    "clipboard": "~1.5.5",
     "ember-browserify": "^1.0.5",
     "ember-cli": "1.13.6",
     "ember-cli-app-version": "0.4.0",
@@ -43,11 +44,11 @@
     "ember-disable-proxy-controllers": "^1.0.0",
     "ember-export-application-global": "^1.0.3",
     "ember-keyboard-shortcuts": "0.3.0",
+    "ember-notify": "^4.3.1",
     "gulp": "^3.9.0",
     "gulp-run": "^1.6.10",
     "markdown": "^0.5.0",
     "postcss": "^5.0.5",
-    "pretty-data": "^0.40.0",
-    "clipboard": "~1.5.5"
+    "pretty-data": "^0.40.0"
   }
 }

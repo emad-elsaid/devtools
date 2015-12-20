@@ -2,6 +2,8 @@ import Ember from 'ember';
 import Clipboard from 'npm:clipboard';
 
 export default Ember.Component.extend({
+
+  notify: Ember.inject.service('notify'),
   classNames: ['devtools-textarea'],
 
   didInsertElement: function(){
@@ -10,6 +12,8 @@ export default Ember.Component.extend({
           text: function(){
             return view.get('value');
           }
+        }).on('success', function(){
+          view.get('notify').info('Text copied to your clipboard.');
         }),
         clipboard_cut = new Clipboard(this.$('.cut-btn')[0], {
           text: function(){
@@ -17,8 +21,9 @@ export default Ember.Component.extend({
           }
         }).on('success', function(){
           view.set('value', '');
+          view.get('notify').info('Text cut to your clipboard.');
         });
-        
+
     this.setProperties({
       'clipboard_copy': clipboard_copy,
       'clipboard_cut': clipboard_cut
