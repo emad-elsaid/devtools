@@ -1,0 +1,10 @@
+.top-bar{
+  li.chrome-download{
+    a{
+      line-height: 0px !important;
+      img{
+        max-height: $topbar-height;
+      }
+    }
+  }
+}
