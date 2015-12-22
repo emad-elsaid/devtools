@@ -41,14 +41,14 @@ export default Ember.Component.extend( KeyboardShortcuts,{
 
 
   // keyboard accessibility
-  selectedIndex: 0,
+  selectedIndex: -1,
   selectedRoute: function(){
     return this.get('routes')[this.get('selectedIndex')];
   }.property('selectedIndex', 'routes'),
 
-  // rest selected index if the search query changed
-  selectedRouteReseter: function(){
-    this.set('selectedIndex', 0);
+  // reset selected index if the search query changed
+  resetSelectedRoute: function(){
+    this.set('selectedIndex', -1);
   }.observes('routes'),
 
   actions: {
@@ -64,6 +64,7 @@ export default Ember.Component.extend( KeyboardShortcuts,{
 
     keyboardEnter: function(){
       this.container.lookup('router:main').router.transitionTo(this.get('selectedRoute').route);
+      this.resetSelectedRoute();
     }
   },
 
