@@ -8,6 +8,7 @@ $aside-width: 300px;
     position: fixed;
     height: 100%;
     background-color: #eee;
+    border-right: 1px solid darken(#eee, 10%);
   }
   section.body{
     padding-left: $aside-width;
