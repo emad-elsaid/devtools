@@ -1,0 +1,8 @@
+.darkroom-image{
+  .darkroom-toolbar{
+    position: static;
+    &:before{
+      display: none;
+    }
+  }
+}

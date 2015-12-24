@@ -25,6 +25,7 @@ Router.map(function() {
   this.route('autoprefixer');
   this.route('HtmlJsCssSandbox');
   this.route('numberSystemsCalculator');
+  this.route('imageEditor');
 });
 
 export default Router;

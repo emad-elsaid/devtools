@@ -22,6 +22,9 @@ module.exports = function(defaults) {
   // modules that you would like to import into your application
   // please specify an object with the list of modules as keys
   // along with the exports of each module as its value.
+  app.import("bower_components/fabric/dist/fabric.js");
+  app.import('bower_components/darkroom/build/darkroom.js');
+  app.import('bower_components/darkroom/build/darkroom.css');
 
   return app.toTree();
 };

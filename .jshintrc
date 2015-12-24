@@ -3,7 +3,8 @@
     "document",
     "window",
     "-Promise",
-    "ga"
+    "ga",
+    "Darkroom"
   ],
   "browser": true,
   "boss": true,

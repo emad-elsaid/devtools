@@ -1,0 +1,16 @@
+<h3>
+  Image Editor
+  <small>By <a href="https://github.com/blazeeboy" target="_blank">Emad Elsaid</a></small>
+</h3>
+
+<div class="row full-width">
+  <div class="small-12 columns">
+    <label>
+      Open An Image: 
+    </label>
+    {{devtools-file value=image format="url"}}
+    <div class="darkroom-image">
+      <img src="{{image}}" id="darkroom" />
+    </div>
+  </div>
+</div>
