@@ -33,6 +33,8 @@ export default Ember.Component.extend({
         case 'url':
           reader.readAsDataURL(file);
           break;
+        default:
+          reader.readAsText(file);
       }
     } else {
       this.set('value', '');

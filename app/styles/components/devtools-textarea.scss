@@ -12,17 +12,8 @@
       font-size: rem-calc(18);
     }
 
-    form{
+    label{
       display: inline-block;
-    }
-
-    input[type=file]{
-      width: 0.1px;
-    	height: 0.1px;
-    	opacity: 0;
-    	overflow: hidden;
-    	position: absolute;
-    	z-index: -1;
     }
 
     .textarea-length{
@@ -30,9 +21,6 @@
       color: #999999;
     }
 
-    label{
-      display: inline-block;
-    }
 
   }
 }

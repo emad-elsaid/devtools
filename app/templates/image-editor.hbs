@@ -5,10 +5,10 @@
 
 <div class="row full-width">
   <div class="small-12 columns">
-    <label>
-      Open An Image: 
-    </label>
-    {{devtools-file value=image format="url"}}
+    {{#devtools-file-button value=image format="url"}}
+      <i class="mdi">image</i> Open An Image
+    {{/devtools-file-button}}
+
     <div class="darkroom-image">
       <img src="{{image}}" id="darkroom" />
     </div>

@@ -1,12 +1,9 @@
 {{textarea rows=rows cols=cols placeholder=placeholder name=name selectionEnd=selectionEnd selectionStart=selectionStart wrap=wrap lang=lang dir=dir value=value}}
 
 <div class="tools">
-    <form>
-      {{devtools-file value=value name="uploader" id=fileID}}
-      <label for="{{fileID}}" title="Open file...">
-        <i class="mdi">insert_drive_file</i>
-      </label>
-    </form>
+    {{#devtools-file-button value=value}}
+      <i class="mdi">insert_drive_file</i>
+    {{/devtools-file-button}}
     <label onclick={{action "selectAll"}} title="Select all"><i class="mdi">select_all</i></label>
     <label class="copy-btn" title="Copy to clipboard"><i class="mdi">content_copy</i></label>
     <label class="cut-btn" title="Cut to clipboard"><i class="mdi">content_cut</i></label>
