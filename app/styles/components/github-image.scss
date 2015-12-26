@@ -1,0 +1,8 @@
+.github-image{
+  $size: 25px;
+  img{
+    @include radius;
+    width: $size;
+    height: $size;
+  }
+}
