@@ -3,7 +3,7 @@ import '../lib/darkroom.save';
 
 export default Ember.Controller.extend({
   initDarkroom: function(){
-    if(this.image != ""){
+    if(this.image !== ""){
       // remove darkroom plugin output
       Ember.$('.darkroom-toolbar, .darkroom-image-container').remove();
 
