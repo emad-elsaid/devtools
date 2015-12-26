@@ -1,4 +1,6 @@
-{{input placeholder="Search..." value=search autofocus="true"}}
+<div class="input-container">
+  {{input placeholder="Search..." value=search autofocus="true"}}
+</div>
 <ul class="side-nav">
   {{#each routes as |route|}}
     {{app-sidebar-item route=route selectedRoute=selectedRoute}}

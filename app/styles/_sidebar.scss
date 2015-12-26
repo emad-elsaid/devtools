@@ -1,21 +1,66 @@
-.sidebar{
-  padding: 10px;
+.container aside{
+  $sidebar-link-color: #b3b4b8;
+  $sidebar-active-link-color: $primary-color;
+  $sidebar-bg-color: $topbar-bg-color;
+  $sidebar-input-color: lighten($sidebar-link-color, 0%);
 
-  ul{
-    overflow: auto;
-    max-height: 100%;
-    li{
-      border-top: 1px solid #ddd;
-      margin-bottom: 0px;
-      &:first-child{
-        border-top: 0px none;
+  background-color: $sidebar-bg-color;
+  border-right: 1px solid darken($topbar-bg-color, 10%);
+
+  .sidebar{
+
+    .input-container{
+      margin: 0px 10px;
+    }
+
+    input[type=text]{
+      background-color: lighten($sidebar-bg-color, 20%);
+      color: $sidebar-input-color;
+
+      &::-webkit-input-placeholder {
+        color: $sidebar-input-color;
+      }
+
+      :-moz-placeholder { /* Firefox 18- */
+         color: $sidebar-input-color;
+      }
+
+      &::-moz-placeholder {  /* Firefox 19+ */
+         color: $sidebar-input-color;
+      }
+
+      &:-ms-input-placeholder {
+         color: $sidebar-input-color;
       }
     }
-    .selected{
+
+    ul{
+      overflow: auto;
+      max-height: 100%;
+
       li{
-        background-color: $primary-color;
+        margin-bottom: 0px;
         a{
-          color: #fff !important;
+          color: $sidebar-link-color;
+
+          &:hover{
+            background-color: darken($topbar-bg-color, 5%);
+          }
+        }
+      }
+
+      li.active{
+        border-left: 2px solid $sidebar-active-link-color;
+      }
+
+      .selected{
+
+        li{
+          background-color: darken($topbar-bg-color, 5%);
+
+          a{
+            color: #fff !important;
+          }
         }
       }
     }
