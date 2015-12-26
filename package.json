@@ -49,6 +49,7 @@
     "gulp": "^3.9.0",
     "gulp-run": "^1.6.10",
     "gulp-sass": "^2.1.1",
+    "liquid-fire": "0.22.1",
     "markdown": "^0.5.0",
     "postcss": "^5.0.5",
     "pretty-data": "^0.40.0"
