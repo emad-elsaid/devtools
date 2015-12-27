@@ -1,12 +1,18 @@
 import Ember from 'ember';
 
 export default Ember.Component.extend({
-  classNames: ['github-image', 'has-tip'],
+  classNames: ['github-image'],
   tagName: 'span',
   user: 'github',
 
   didInsertElement: function(){
-    this.$().foundation();
+    this.$().foundation('tooltip');
+  },
+
+  willDestroyElement: function(){
+    this.$('*[data-selector]').each(function(){
+      Ember.$( '#'+Ember.$(this).data('selector') ).remove();
+    });
   },
 
   image: function(){
