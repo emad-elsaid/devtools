@@ -1,7 +1,8 @@
 export default Darkroom.plugins['save'] = Darkroom.Plugin.extend({
   Download: Darkroom.Transformation.extend({
     applyTransformation: function(canvas) {
-      open(canvas.toDataURL());
+      var data = canvas.toDataURL();
+      download(data, 'image.png', 'image/png');
     }
   }),
 
