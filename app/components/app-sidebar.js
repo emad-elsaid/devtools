@@ -63,8 +63,7 @@ export default Ember.Component.extend( KeyboardShortcuts,{
     },
 
     keyboardEnter: function(){
-      this.container.lookup('router:main').router.transitionTo(this.get('selectedRoute').route);
-      this.resetSelectedRoute();
+      this.$('.selected li').trigger('click');
     }
   },
 
