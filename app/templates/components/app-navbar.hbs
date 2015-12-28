@@ -7,6 +7,13 @@
   </ul>
 
   <section class="top-bar-section">
+
+    <ul class="left">
+      <li class="{{if sidebar 'active'}}" data-tooltip aria-haspopup="true" class="has-tip" title="Toggle Sidebar">
+        <a href="#" {{action 'toggleSidebar'}}><i class="mdi">menu</i></a>
+      </li>
+    </ul>
+
     <!-- Right Nav Section -->
     <ul class="right">
       <li class="chrome-download">

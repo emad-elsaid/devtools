@@ -1,5 +1,5 @@
-{{app-navbar}}
-<div class="container">
+{{app-navbar sidebar=sidebar}}
+<div class="container {{if sidebar '' 'hidden-sidebar'}}">
   <aside>
     {{app-sidebar}}
   </aside>

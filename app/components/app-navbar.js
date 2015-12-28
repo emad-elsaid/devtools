@@ -1,5 +1,10 @@
 import FoundationBase from './foundation-base';
 
 export default FoundationBase.extend({
-  classNames: ['fixed']
+  classNames: ['fixed'],
+  actions: {
+    toggleSidebar: function(){
+      this.toggleProperty('sidebar');
+    }
+  }
 });
