@@ -9,8 +9,14 @@
 
   .sidebar{
 
+    border-top: 2px solid $primary-color;
+
     .input-container{
-      margin: 0px 10px;
+      margin: 10px 10px 0px;
+    }
+
+    .side-nav{
+      padding-top: 0px;
     }
 
     input[type=text]{
