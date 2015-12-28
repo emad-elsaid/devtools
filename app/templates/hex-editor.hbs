@@ -1,0 +1,59 @@
+<h3>
+  Hex Editor
+  <small>By
+    {{github-image user='blazeeboy' name='Emad Elsaid'}}
+  </small>
+</h3>
+
+<div class="row full-width">
+  <div class="small-12 columns">
+    {{#devtools-file-button value=file format='binary'}}
+      <i class="mdi">insert_drive_file</i> Open a File
+    {{/devtools-file-button}}
+  </div>
+</div>
+{{#if file}}
+  <div class="row full-width">
+
+    <div class="small-6 columns">
+      <label>Base:</label>
+      {{input value=base type='number' max='36' min='2'}}
+      <label>Page:</label>
+      {{input value=page type='number'}}
+    </div>
+    <div class="small-6 columns">
+      <label>File size:</label>
+      {{input value=fileSize type='number' disabled='disabled'}}
+      <label>Total Pages:</label>
+      {{input value=totalPages type='number' disabled='disabled'}}
+    </div>
+
+  </div>
+
+  <div class="row full-width">
+    <div class="small-6 columns">
+      <table class="full-width">
+        {{#each currentPage as |line|}}
+          <tr>
+            {{#each line as |char|}}
+              <td>{{char}}</td>
+            {{/each}}
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+
+    <div class="small-6 columns">
+      <table class="full-width">
+        {{#each currentAsciiPage as |line|}}
+          <tr>
+            {{#each line as |char|}}
+              <td>{{char}}</td>
+            {{/each}}
+          </tr>
+        {{/each}}
+      </table>
+    </div>
+
+  </div>
+{{/if}}

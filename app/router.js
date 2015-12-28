@@ -26,6 +26,7 @@ Router.map(function() {
   this.route('HtmlJsCssSandbox');
   this.route('numberSystemsCalculator');
   this.route('imageEditor');
+  this.route('hexEditor');
 });
 
 export default Router;
