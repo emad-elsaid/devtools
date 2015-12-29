@@ -1,19 +1,10 @@
 import Ember from 'ember';
+import FoundationBase from '../mixins/foundation-base';
 
-export default Ember.Component.extend({
+export default Ember.Component.extend(FoundationBase, {
   classNames: ['github-image'],
   tagName: 'span',
   user: 'github',
-
-  didInsertElement: function(){
-    this.$().foundation('tooltip');
-  },
-
-  willDestroyElement: function(){
-    this.$('*[data-selector]').each(function(){
-      Ember.$( '#'+Ember.$(this).data('selector') ).remove();
-    });
-  },
 
   image: function(){
     return `https://avatars.githubusercontent.com/${this.get('user')}`;

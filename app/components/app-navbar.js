@@ -1,6 +1,7 @@
-import FoundationBase from './foundation-base';
+import Ember from 'ember';
+import FoundationBase from '../mixins/foundation-base';
 
-export default FoundationBase.extend({
+export default Ember.Component.extend(FoundationBase, {
   classNames: ['fixed'],
   actions: {
     toggleSidebar: function(){
