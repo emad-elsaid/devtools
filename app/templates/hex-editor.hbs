@@ -42,26 +42,22 @@
 
   </div>
 
-  {{#if error}}
-    <small class="error">{{error}}</small>
-  {{else}}
-    {{#if changed}}
-      <div class="alert-box secondary">
-        <div class="row">
-          <div class="columns small-8">
-            Page has changed, do you want to save changes to current page?
-          </div>
-          <div class="columns small-4">
-            <a href="#" {{action 'save'}} class="button tiny">Save</a>
-          </div>
+  {{#if changed}}
+    <div class="alert-box secondary">
+      <div class="row">
+        <div class="columns small-8">
+          Page has changed, do you want to save changes to current page?
+        </div>
+        <div class="columns small-4">
+          <a href="#" {{action 'save'}} class="button tiny">Save</a>
         </div>
       </div>
-    {{/if}}
+    </div>
   {{/if}}
 
   <div class="row full-width">
     <div class="small-9 columns">
-      {{textarea value=currentPage rows=lines class="code" key-press="pageChanged"}}
+      {{textarea value=currentPage rows=lines class="code" key-up="pageChanged"}}
     </div>
 
     <div class="small-3 columns">

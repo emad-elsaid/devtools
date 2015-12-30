@@ -2,6 +2,7 @@ import Ember from 'ember';
 
 export default Ember.Controller.extend({
 
+  notify: Ember.inject.service('notify'),
   page: 1,
   pageSize: 512,
   base: 16,
@@ -99,14 +100,14 @@ export default Ember.Controller.extend({
         newPagelength = strippedPage.length;
 
     if(newPagelength !== pageLength ){
-      return this.set('error', `Bytes length (${newPagelength}) is not equal to ${pageLength}.`);
+      return this.get('notify').alert(`Bytes length (${newPagelength}) is not equal to ${pageLength}.`);
     }
 
     for(let i=0; i<strippedPage.length; i++){
       var trimmedChar = strippedPage[i].replace(/^0+/, '') || '0';
       strippedPage[i] = trimmedChar;
       if( isNaN(parseInt(trimmedChar, base)) ){
-        return this.set('error', `Bytes (${strippedPage[i]}) is not valid base (${base}) byte.`);
+        return this.get('notify').alert(`Bytes (${strippedPage[i]}) is not valid base (${base}) byte.`);
       }
     }
 
@@ -121,8 +122,6 @@ export default Ember.Controller.extend({
 
     file = before + pageString + after;
     this.set('file', file);
-
-    this.set('error', null);
   }
 
 });
