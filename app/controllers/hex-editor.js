@@ -4,9 +4,9 @@ export default Ember.Controller.extend({
 
   notify: Ember.inject.service('notify'),
   page: 1,
-  pageSize: 512,
+  pageSize: 1024,
   base: 16,
-  lineLength: 10,
+  lineLength: 16,
 
   lines: function(){
     return Math.ceil(this.get('pageSize') / this.get('lineLength'));

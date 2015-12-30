@@ -1,3 +1,5 @@
+<div class="hex-editor">
+
 <h3>
   Hex Editor
   <small>By
@@ -45,10 +47,10 @@
   {{#if changed}}
     <div class="alert-box secondary">
       <div class="row">
-        <div class="columns small-8">
+        <div class="columns small-7">
           Page has changed, do you want to save changes to current page?
         </div>
-        <div class="columns small-4">
+        <div class="columns small-5">
           <a href="#" {{action 'save'}} class="button tiny">Save</a>
         </div>
       </div>
@@ -57,7 +59,7 @@
 
   <div class="row full-width">
     <div class="small-9 columns">
-      {{textarea value=currentPage rows=lines class="code" key-up="pageChanged"}}
+      {{textarea value=currentPage rows=lines class="code editor" key-up="pageChanged"}}
     </div>
 
     <div class="small-3 columns">
@@ -66,3 +68,4 @@
 
   </div>
 {{/if}}
+</div>
