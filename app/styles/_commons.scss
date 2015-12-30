@@ -9,3 +9,13 @@
   color: #ccc;
   font-size: 0.8em;
 }
+.code{
+  font-family: monospace;
+}
+.toolbar{
+  a, label{
+    color: inherit;
+    font-size: $form-label-font-size;
+    color: $form-label-font-color;
+  }
+}

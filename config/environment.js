@@ -11,7 +11,7 @@ module.exports = function(environment) {
       'script-src': "'self' 'unsafe-inline' 'unsafe-eval' www.google-analytics.com use.typekit.net connect.facebook.net maps.googleapis.com maps.gstatic.com *.togetherjs.com togetherjs.com",
       'font-src': "'self' data: use.typekit.net *.togetherjs.com togetherjs.com",
       'connect-src': "'self' *.togetherjs.com togetherjs.com *.ytimg.com",
-      'img-src': "'self' www.facebook.com p.typekit.net www.google-analytics.com *.togetherjs.com togetherjs.com",
+      'img-src': "'self' www.facebook.com p.typekit.net www.google-analytics.com *.togetherjs.com togetherjs.com avatars.githubusercontent.com",
       'style-src': "'self' 'unsafe-inline' use.typekit.net *.togetherjs.com togetherjs.com",
       'frame-src': "'self' s-static.ak.facebook.com static.ak.facebook.com www.facebook.com *.togetherjs.com togetherjs.com docs.google.com",
       "media-src": "'self' togetherjs.com *.togetherjs.com"

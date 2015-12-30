@@ -7,11 +7,23 @@
 
 <div class="row full-width">
   <div class="small-12 columns">
-    {{#devtools-file-button value=file format='binary'}}
-      <i class="mdi">insert_drive_file</i> Open a File
-    {{/devtools-file-button}}
+    <ul class="inline-list toolbar">
+      <li>
+        {{#devtools-file-button value=file format='binary'}}
+          <i class="mdi">insert_drive_file</i> Open a File
+        {{/devtools-file-button}}
+      </li>
+      <li>
+        {{#if file}}
+          <a href="#" {{action 'download'}}>
+            <i class="mdi">save</i> Download
+          </a>
+        {{/if}}
+      </li>
+    </ul>
   </div>
 </div>
+
 {{#if file}}
   <div class="row full-width">
 
@@ -19,7 +31,7 @@
       <label>Base:</label>
       {{input value=base type='number' max='36' min='2'}}
       <label>Page:</label>
-      {{input value=page type='number'}}
+      {{input value=page type='number' min='1' max=totalPages}}
     </div>
     <div class="small-6 columns">
       <label>File size:</label>
@@ -30,29 +42,30 @@
 
   </div>
 
+  {{#if error}}
+    <small class="error">{{error}}</small>
+  {{else}}
+    {{#if changed}}
+      <div class="alert-box secondary">
+        <div class="row">
+          <div class="columns small-8">
+            Page has changed, do you want to save changes to current page?
+          </div>
+          <div class="columns small-4">
+            <a href="#" {{action 'save'}} class="button tiny">Save</a>
+          </div>
+        </div>
+      </div>
+    {{/if}}
+  {{/if}}
+
   <div class="row full-width">
-    <div class="small-6 columns">
-      <table class="full-width">
-        {{#each currentPage as |line|}}
-          <tr>
-            {{#each line as |char|}}
-              <td>{{char}}</td>
-            {{/each}}
-          </tr>
-        {{/each}}
-      </table>
+    <div class="small-9 columns">
+      {{textarea value=currentPage rows=lines class="code" key-press="pageChanged"}}
     </div>
 
-    <div class="small-6 columns">
-      <table class="full-width">
-        {{#each currentAsciiPage as |line|}}
-          <tr>
-            {{#each line as |char|}}
-              <td>{{char}}</td>
-            {{/each}}
-          </tr>
-        {{/each}}
-      </table>
+    <div class="small-3 columns">
+      {{textarea value=currentAsciiPage rows=lines class="code" disabled=true}}
     </div>
 
   </div>
