@@ -2,6 +2,7 @@ import Ember from 'ember';
 import PP from 'npm:pretty-data';
 
 export default Ember.Controller.extend({
+  authors: ['Vkiryukhin'],
   inputText:
 `SELECT *
 FROM devtools

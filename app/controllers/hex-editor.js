@@ -3,6 +3,7 @@ import Ember from 'ember';
 export default Ember.Controller.extend({
 
   notify: Ember.inject.service('notify'),
+  authors: ['blazeeboy'],
   page: 1,
   pageSize: 1024,
   base: 16,

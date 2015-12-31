@@ -4,6 +4,7 @@ import autoprefixer from 'npm:autoprefixer';
 import postcss from 'npm:postcss';
 
 export default Ember.Controller.extend({
+  authors: ['ai', 'Ebram-Tharwat'],
   browsers: 'last 2 versions',
   inputText: `.a{
   display: flex;

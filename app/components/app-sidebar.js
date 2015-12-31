@@ -5,6 +5,7 @@ import KeyboardShortcuts from 'ember-keyboard-shortcuts/mixins/component';
 export default Ember.Component.extend( KeyboardShortcuts,{
   classNames: ['sidebar'],
   search: '',
+  routesService: Ember.inject.service('routes'),
 
   didInsertElement(){
     var ul = this.$('.side-nav');
@@ -15,28 +16,11 @@ export default Ember.Component.extend( KeyboardShortcuts,{
   },
 
   isValid(route){
-    var isExceptionalRoute = ['error', 'index', 'loading', 'application'].contains(route);
-    var isSubstate = route.endsWith('_error') || route.endsWith('_loading');
-    var includeSearch = route.toLowerCase().includes(this.get('search').toLowerCase());
-    return !(isExceptionalRoute || isSubstate) && includeSearch;
+    return route.toLowerCase().includes(this.get('search').toLowerCase());
   },
 
   routes: function(){
-    var container = this.container.lookup('router:main');
-    var router = container.router;
-    if( !router ){ return []; }
-    var routes = router.recognizer.names;
-    var keys = Object.keys(routes);
-    var objects = [];
-    for(var i=0; i<keys.length; i++){
-      if( this.isValid(keys[i]) ){
-        objects.push({
-          label: keys[i],
-          route: keys[i]
-        });
-      }
-    }
-    return objects.sortBy('label');
+    return this.get('routesService').get('routes').filter((route)=> this.isValid(route));
   }.property('search'),
 
 

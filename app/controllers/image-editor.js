@@ -3,6 +3,7 @@ import '../lib/darkroom.save';
 import FoundationBase from '../mixins/foundation-base';
 
 export default Ember.Controller.extend(FoundationBase, {
+  authors: ['MattKetmo', 'blazeeboy'],
   initDarkroom: function(){
     if(this.image !== ""){
       // remove darkroom plugin output

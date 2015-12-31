@@ -1,3 +1,4 @@
+
 <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area">
     <li class="name">
@@ -12,6 +13,14 @@
       <li class="{{if sidebar 'active'}}" data-tooltip aria-haspopup="true" class="has-tip" title="Toggle Sidebar">
         <a href="#" {{action 'toggleSidebar'}}><i class="mdi">menu</i></a>
       </li>
+      {{#each routesService.routes as |route|}}
+        {{#link-to route tagName='li' href='#' class='route'}}
+          {{#link-to route }}<i class="mdi">code</i> {{titlize route}}{{/link-to}}
+        {{/link-to}}
+      {{/each}}
+      {{#each authors as |author|}}
+        {{github-image user=author tagName="li"}}
+      {{/each}}
     </ul>
 
     <!-- Right Nav Section -->

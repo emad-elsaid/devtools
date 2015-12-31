@@ -1,6 +1,8 @@
 import Ember from 'ember';
 
 export default Ember.Controller.extend({
+  authors: ['blazeeboy'],
+  
   binaryChanged: function(){
     var bin = this.get('binary');
     var dec = parseInt(bin, 2);
