@@ -7,15 +7,7 @@
       }
     }
   }
-  li.route{
-    display: none;
-    &.active{
-      background-color: transparent !important;
-      display:inherit;
-
-      a{
-        background-color: transparent !important;
-      }
-    }
+  li.name.active{
+    background-color: $primary-color;
   }
 }

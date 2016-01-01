@@ -1,8 +1,21 @@
-
 <nav class="top-bar" data-topbar role="navigation">
-  <ul class="title-area">
+  <ul class="title-area inline-list">
+    <li class="{{if sidebar 'active name' 'name'}} " data-tooltip aria-haspopup="true" title="Toggle Sidebar">
+      <h1><a href="#" {{action 'toggleSidebar'}}>
+        <i class="mdi">menu</i>
+      </a></h1>
+    </li>
     <li class="name">
-      <h1>{{#link-to 'application'}}<i class="mdi">code</i> DevTools{{/link-to}}</h1>
+      <h1>
+        {{#link-to 'application'}}
+          <i class="mdi">code</i>
+          {{#if showFullLogo}}
+            DevTools
+          {{else}}
+            {{titlize currentPath}}
+          {{/if}}
+        {{/link-to}}
+      </h1>
     </li>
     <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
   </ul>
@@ -10,14 +23,6 @@
   <section class="top-bar-section">
 
     <ul class="left">
-      <li class="{{if sidebar 'active'}}" data-tooltip aria-haspopup="true" class="has-tip" title="Toggle Sidebar">
-        <a href="#" {{action 'toggleSidebar'}}><i class="mdi">menu</i></a>
-      </li>
-      {{#each routesService.routes as |route|}}
-        {{#link-to route tagName='li' href='#' class='route'}}
-          {{#link-to route }}<i class="mdi">code</i> {{titlize route}}{{/link-to}}
-        {{/link-to}}
-      {{/each}}
       {{#each authors as |author|}}
         {{github-image user=author tagName="li"}}
       {{/each}}
