@@ -4,6 +4,7 @@ node_js:
   - "5.3.0"
 env:
   - CXX=g++-4.8
+sudo: required
 addons:
   apt:
     sources:
