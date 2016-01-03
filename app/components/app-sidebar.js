@@ -16,7 +16,7 @@ export default Ember.Component.extend( KeyboardShortcuts,{
   },
 
   isValid(route){
-    return route.toLowerCase().includes(this.get('search').toLowerCase());
+    return route.toLowerCase().indexOf(this.get('search').toLowerCase()) !== -1;
   },
 
   routes: function(){

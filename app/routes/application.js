@@ -9,7 +9,7 @@ export default Ember.Route.extend({
       return tokens.join(' - ') + ' - DevTools';
     }else{
       var currentRoute = this.controller.currentRouteName;
-      if(this.get('routesService').get('routes').includes(currentRoute)){
+      if(this.get('routesService').get('routes').indexOf(currentRoute) !== -1){
         return `${titlize([currentRoute])} - DevTools`;
       }else{
         return 'DevTools';
