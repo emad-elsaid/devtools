@@ -1,0 +1,40 @@
+<form>
+<div class="row">
+  <div class="medium-6 columns">
+    <label>
+      Open an SVG file
+      {{devtools-file value=svgImage format="url"}}
+    </label>
+  </div>
+  <div class="medium-6 columns">
+    <label>
+      <span>Choose file DPI</span>
+      {{#x-select value=baseDPI}}
+        {{#each DPIs as |DPI|}}
+          {{#x-option value=DPI.name}}{{DPI.name}}{{/x-option}}
+        {{/each}}
+      {{/x-select}}
+    </label>
+  </div>
+  <div class="small-12 columns">
+    <label>
+      Image name
+      {{input value=imageName}}
+    </label>
+  </div>
+  <div class="medium-12 columns text-center">
+    {{#if svgImage}}
+      <a {{action 'download'}} class="button">Download</a>
+    {{else}}
+      <a class="button disabled">Download</a>
+    {{/if}}
+  </div>
+
+  {{#each images as |image|}}
+    <div class="medium-12 columns text-center">
+      <img src={{image.image}} />
+    </div>
+  {{/each}}
+
+</div>
+</form>

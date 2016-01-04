@@ -5,7 +5,8 @@
     "-Promise",
     "ga",
     "Darkroom",
-    "download"
+    "download",
+    "JSZip"
   ],
   "browser": true,
   "boss": true,

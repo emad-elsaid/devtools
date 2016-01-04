@@ -23,10 +23,11 @@ Router.map(function() {
   this.route('prettyPrintSql');
   this.route('minifySql');
   this.route('autoprefixer');
-  this.route('HtmlJsCssSandbox');
+  this.route('htmlJsCssSandbox');
   this.route('numberSystemsCalculator');
   this.route('imageEditor');
   this.route('hexEditor');
+  this.route('svgToAndroidAssets');
 });
 
 export default Router;

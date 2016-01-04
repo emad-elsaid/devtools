@@ -30,6 +30,7 @@ module.exports = function(defaults) {
       'download': ['default']
     }
   });
+  app.import('bower_components/jszip/dist/jszip.js');
 
   return app.toTree();
 };
