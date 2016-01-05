@@ -14,7 +14,8 @@
     "mousetrap": "~1.5.2",
     "qunit": "~1.20.0",
     "darkroom": "darkroomjs#~2.0.1",
-    "downloadjs": "~1.4.1"
+    "downloadjs": "~1.4.1",
+    "jszip": "Stuk/jszip#~2.5.0"
   },
   "resolutions": {
     "ember": "2.2.0"
