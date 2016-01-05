@@ -1,7 +1,7 @@
 <nav class="top-bar" data-topbar role="navigation">
   <ul class="title-area inline-list">
-    <li class="{{if sidebar 'active name' 'name'}} " data-tooltip aria-haspopup="true" title="Toggle Sidebar">
-      <h1><a href="#" {{action 'toggleSidebar'}}>
+    <li class="{{if sidebar 'active name' 'name'}} " data-tooltip aria-haspopup="true" data-options="disable_for_touch:true" title="Toggle Sidebar" {{action 'toggleSidebar'}}>
+      <h1><a>
         <i class="mdi">menu</i>
       </a></h1>
     </li>

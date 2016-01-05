@@ -6,6 +6,7 @@ export default Ember.Component.extend(FoundationBase, {
   actions: {
     toggleSidebar: function(){
       this.toggleProperty('sidebar');
+      return true;
     }
   },
   showFullLogo: function(){
