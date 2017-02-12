@@ -1,0 +1,9 @@
+* Devtools TODO [2/7]
+
+- [ ] HTML to HAML converter
+- [ ] unserializer.com
+- [ ] svg to android sizes
+- [ ] color converter
+- [ ] colorzilla
+- [X] image crop
+- [X] JSON Formatter
