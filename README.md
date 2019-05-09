@@ -1,5 +1,11 @@
 # DevTools [![Build Status](https://travis-ci.org/blazeeboy/devtools.svg?branch=master)](https://travis-ci.org/blazeeboy/devtools.svg)
 
+-------
+This repository is not maintained anymore, after long time I wanted to even run
+the development server it didn't work, tried to update the packages it also
+broke.
+-------
+
 A web application built with Emberjs aims to collect all handy scripts developers
 need everyday in one place such as (json encoder/decoder, json prettify, Markdown preview, uuid generator, md5 encryptor, image crop tool..etc).
 
